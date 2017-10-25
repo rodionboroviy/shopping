@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from "@angular/common/http";
+import { StoreModule } from '@ngrx/store';
 
 import { AppComponent } from './app.component';
 import { ShoppingListService } from "./shopping-list/shopping-list.service";
@@ -17,6 +18,8 @@ import { SharedModule } from "./shared/shared.module";
 import { AuthModule } from "./auth/auth.module";
 import { CoreModule } from "./core/core.module";
 
+import { shoppingListReduser } from './shopping-list/store/shopping-list.redusers';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -28,7 +31,8 @@ import { CoreModule } from "./core/core.module";
     ShoppingListModule,
     SharedModule,
     AuthModule,
-    CoreModule
+    CoreModule,
+    StoreModule.forRoot({shoppingList: shoppingListReduser})
   ],
   bootstrap: [AppComponent]
 })

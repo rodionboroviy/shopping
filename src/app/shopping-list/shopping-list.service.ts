@@ -19,11 +19,6 @@ export class ShoppingListService {
         return this.ingredients[index];
     }
 
-    addIngredient(ingredient: Ingredient){
-        this.ingredients.push(ingredient);
-        this.ingredientsChanged.next(this.getIngredients());
-    }
-
     addIngredients(ingredients: Ingredient[]){
         this.ingredients.push(...ingredients);
         this.ingredientsChanged.next(this.getIngredients());
