@@ -5,7 +5,6 @@ import { HttpClientModule } from "@angular/common/http";
 import { StoreModule } from '@ngrx/store';
 
 import { AppComponent } from './app.component';
-import { ShoppingListService } from "./shopping-list/shopping-list.service";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { RecipeService } from "./recipes/recipe.service";
