@@ -24,7 +24,7 @@ import { AuthEffects } from './auth/store/auth.effects';
     AppComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({appId: 'my-universal-app'}),
+    BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     ShoppingListModule,
